@@ -5,19 +5,20 @@
      font-weight: 700;
 }
 .link {
-    border: 2px solid beige;
+    border: 2px solid #00000052;
     width: 150px;
-    height: 70px;
-    padding: 15px 30px;
+    height: 50px;
+    text-align: center;
+    padding-top: 10px;
     background-color: lavender;
     box-shadow: 5px 10px whitesmoke;
     border-radius: 10px;
     margin-bottom: 25px;
 }
 .leftside-div {
-    margin-top: 100px;
+    margin-top: 200px;
     background-color: beige;
-    padding-left: 120px;
+    padding-left: 50px;
     border: 3px solid #0000001a;
     border-radius: 10px;
 }
