@@ -1,0 +1,15 @@
+#login{
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    margin-right: 50px;
+    padding: 10px 60px;
+}
+#signin{
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    padding: 10px 60px;
+}
+.lg-sg{
+    display: flex;
+    margin-left: 400px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}

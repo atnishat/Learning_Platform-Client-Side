@@ -1,0 +1,49 @@
+.SignIn-button {
+    /* fallback for old browsers */
+    background: #fccb90;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    
+  }
+  
+ @media (min-width: 768px) {
+    .gradient-form {
+      height: 100vh !important;
+    }
+  }
+  @media (min-width: 769px) {
+    .gradient-custom-2 {
+      border-top-right-radius: .3rem;
+      border-bottom-right-radius: .3rem;
+    }
+  }
+  #SignIn-button {
+
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    margin-top: 50px;
+    margin-left: 240px;
+    padding: 10px 90px;
+    border-radius: 20px;
+  
+}
+
+#form {
+    width: 700px;
+    height: 600px;
+    margin-left: 300px;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 20px 30px #80808036;
+}
+
+.form-div {
+    width: 600px;
+    margin-top: 40px;
+    text-align: left;
+    margin-left: 50px;
+   
+}

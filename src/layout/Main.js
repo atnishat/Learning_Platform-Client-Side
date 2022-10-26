@@ -5,11 +5,14 @@ import Footer from '../Pages/Shared/Footer/Footer';
 import Header from '../Pages/Shared/Headers/Header';
 import LeftSideNav from '../Pages/Shared/LeftSideNav/LeftSideNav';
 import Cover from '../Pages/Shared/Container/Cover'
+import Loginbutton from '../Pages/Shared/loginbutton/Loginbutton';
 
 const Main = () => {
     return (
         <div>
+            <Loginbutton></Loginbutton>
             <Header></Header>
+            
             <Cover></Cover>
             <Container>
 
