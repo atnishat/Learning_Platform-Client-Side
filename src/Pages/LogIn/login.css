@@ -31,9 +31,9 @@
   
 }
 
-#form {
+#form-login{
     width: 700px;
-    height: 600px;
+    height: 400px;
     margin-left: 300px;
     border: 2px solid black;
     border-radius: 20px;

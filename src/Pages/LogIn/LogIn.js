@@ -8,6 +8,7 @@ import { useContext } from 'react';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import toast from 'react-hot-toast';
 
 
 
@@ -35,6 +36,7 @@ const LogIn = () => {
         console.log(user);
         form.reset();
         setError('');
+        toast.success('successfully Log in');
         navigate(from, {replace:true});
       })
       .catch(error => {
@@ -51,16 +53,7 @@ const LogIn = () => {
     <div className="" >
       <Header></Header>
 
-      <Form onSubmit={handleSubmit} className="my-5" id='form'>
-        <Form.Group className="form-div" controlId="formBasicEmail">
-          <Form.Label>Your Name</Form.Label>
-          <Form.Control name="name" type="text" placeholder="Your Name" />
-        </Form.Group>
-        <Form.Group className="form-div" controlId="formBasicEmail" >
-          <Form.Label>Photo URL</Form.Label>
-          <Form.Control name="photoURL" type="text"  placeholder="Phot URL" />
-        </Form.Group>
-
+      <Form onSubmit={handleSubmit} className="my-5" id='form-login'>
         <Form.Group className="form-div" controlId="formBasicEmail" >
           <Form.Label>Email address</Form.Label>
           <Form.Control name="email" type="email" placeholder="Enter email" required />
