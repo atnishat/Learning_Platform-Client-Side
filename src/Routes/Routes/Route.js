@@ -6,8 +6,9 @@ import LogIn from "../../Pages/LogIn/LogIn";
 import Register from "../../Pages/LogIn/Register/Register";
 import News from "../../Pages/News/News";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
-
-
+import Course from '../../Pages/Course/Course'
+import FAQ from '../../Pages/FAQ/FAQ'
+import Blog from "../../Pages/Blog/Blog";
 
  export const routes = createBrowserRouter([
     {
@@ -39,6 +40,18 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
     {
         path:'/register',
         element:<Register></Register>
+    },
+    {
+        path:'/course',
+        element:<Course></Course>
+    },
+    {
+        path:'/faq',
+        element:<FAQ></FAQ>
+    },
+    {
+        path:'/blog',
+        element:<Blog></Blog>
     }
 
 ])

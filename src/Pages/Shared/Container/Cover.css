@@ -1,7 +1,7 @@
 .header-cover {
     display: flex;
     justify-content: space-between;
-    background-color: beige;
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
   margin-top: 100px;
 
 }
@@ -11,7 +11,7 @@
     width: 500px;
     font-size: 50px;
     font-weight: 700;
-    color: #6495eddb;
+    color: white
 }
 
 .img {
