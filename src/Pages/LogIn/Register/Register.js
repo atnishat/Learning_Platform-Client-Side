@@ -7,11 +7,10 @@ import './Register.css'
 import { Button } from 'react-bootstrap';
 import { useContext } from 'react';
 import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 const Register = () => {
-    const notify = () => toast(error);
+   
 
     const [error, setError] = useState('');
     
@@ -71,12 +70,12 @@ const Register = () => {
                         <Form.Control name="password" type="password" placeholder="Password" required />
                     </Form.Group>
 
-                    <Button  type="submit" id="SignIn-button" onClick={notify}>
+                    <Button  type="submit" id="SignIn-button" >
                         Register
-                        <ToastContainer />
+                    
                     </Button>
                     <Form.Text className="text-danger">
-
+                    {error}
                     </Form.Text>
                 </Form>
 

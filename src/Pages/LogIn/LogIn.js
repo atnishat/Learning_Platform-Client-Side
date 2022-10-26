@@ -6,40 +6,42 @@ import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
 import { useContext } from 'react';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 
 
 const LogIn = () => {
 
   const [error, setError] = useState('');
+
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || '/';
   const { signIn } = useContext(AuthContext);
 
-  const notify = () => toast(error);
+
   const handleSubmit = event => {
     event.preventDefault();
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
-    
-    signIn(email,password)
 
-    .then(result => {
-      const user = result.user;
-      console.log(user);
-      form.reset();
-      setError('');
-      navigate('/');
-    })
-    .catch(error => {
-      console.error(error)
-      setError(error.message);
-    })
-    
+    signIn(email, password)
+
+      .then(result => {
+        const user = result.user;
+        console.log(user);
+        form.reset();
+        setError('');
+        navigate(from, {replace:true});
+      })
+      .catch(error => {
+        console.error(error)
+        setError(error.message);
+      })
+
   }
 
 
@@ -56,7 +58,7 @@ const LogIn = () => {
         </Form.Group>
         <Form.Group className="form-div" controlId="formBasicEmail" >
           <Form.Label>Photo URL</Form.Label>
-          <Form.Control name="photoURL" type="text" placeholder="Phot URL" />
+          <Form.Control name="photoURL" type="text"  placeholder="Phot URL" />
         </Form.Group>
 
         <Form.Group className="form-div" controlId="formBasicEmail" >
@@ -69,13 +71,13 @@ const LogIn = () => {
           <Form.Control name="password" type="password" placeholder="Password" required />
         </Form.Group>
 
-        <Button type="submit" id="SignIn-button" onClick={notify}>
+        <Button type="submit" id="SignIn-button" >
           Log In
-          <ToastContainer />
+
         </Button>
         <Form.Text className="text-danger" >
-          
-      
+
+          {error}
         </Form.Text>
       </Form>
 
