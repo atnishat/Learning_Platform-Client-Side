@@ -1,6 +1,6 @@
 .header-title {
     text-decoration: none;
-    color: #6495eddb;
+    color: black;
     font-weight: 800;
 }
 
@@ -19,7 +19,9 @@
     margin-right: 40px;
     color: black;
 }
-
+.logo-img{
+    width: 40px;
+}
 .reg {
     text-decoration: none;
     margin-right: 40px;

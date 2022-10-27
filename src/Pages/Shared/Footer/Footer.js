@@ -1,11 +1,22 @@
 import React from 'react';
-
+import './Footer.css'
+import {
+  MDBFooter,
+  } from 'mdb-react-ui-kit';
 const Footer = () => {
     return (
-        <div>
-            <h6>This is footer</h6>
-        </div>
-    );
-};
+
+    <MDBFooter className='text-center' id='footer' color='white' bgColor='dark'>
+     
+
+      <div className='text-center p-3'>
+        © 2020 Copyright:
+    
+      </div>
+    </MDBFooter>
+  );
+}
+
+
 
 export default Footer;

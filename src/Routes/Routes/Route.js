@@ -9,6 +9,7 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Course from '../../Pages/Course/Course'
 import FAQ from '../../Pages/FAQ/FAQ'
 import Blog from "../../Pages/Blog/Blog";
+import PageNotFound from "../../pageNotFound/PageNotFound";
 
  export const routes = createBrowserRouter([
     {
@@ -52,6 +53,10 @@ import Blog from "../../Pages/Blog/Blog";
     {
         path:'/blog',
         element:<Blog></Blog>
+    },
+    {
+        path:'*',
+        element:<PageNotFound></PageNotFound>
     }
 
 ])

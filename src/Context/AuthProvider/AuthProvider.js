@@ -1,5 +1,5 @@
 import React, { createContext } from 'react';
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth'
+import { createUserWithEmailAndPassword, getAuth, GithubAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth'
 import app from '../../firebase/firebase.init';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -41,6 +41,13 @@ const AuthProvider = ({ children }) => {
     }
 
 
+    const githubLogin = () =>{
+        setUser(user);
+        return  signInWithPopup(auth,GithubAuthProvider);
+    }
+
+
+
 
     useEffect(() => {
         const unSubsCribe = onAuthStateChanged(auth, (currentUser) => {
@@ -53,7 +60,7 @@ const AuthProvider = ({ children }) => {
         }
     }, [])
 
-    const authInfo = { user, loader,updateUserProfile, providerLogIn, logOut, createUser, signIn };
+    const authInfo = { user, loader,updateUserProfile, providerLogIn, logOut, createUser, signIn , githubLogin};
 
 
     return (
